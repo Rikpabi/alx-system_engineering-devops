@@ -1,0 +1,6 @@
+#!/bin/bash
+ls
+C-x C-s
+C-x C-c
+C-x_C-c
+M-x Tetris
