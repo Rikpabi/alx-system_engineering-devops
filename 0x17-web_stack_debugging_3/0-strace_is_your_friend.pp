@@ -1,6 +1,4 @@
-puppet
-# 0-strace_is_your_friend.pp
-
+# Fixing file permission issue
 file { '/path/to/file':
   ensure  => 'file',
   owner   => 'www-data',
