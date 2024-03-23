@@ -1,9 +1,6 @@
-# Fixing file permission issue
-file { '/path/to/file':
-  ensure  => 'file',
-  owner   => 'www-data',
-  group   => 'www-data',
-  mode    => '0644',
-  require => Package['apache2'],  # Ensure Apache is installed before applying this fix
-}
+# Fixes bad `phpp` extensions to `php`
 
+exec { 'fix-wordpress':
+  command => 'sed -i s/phpp/php/g /var/www/html/wp-settings.php',
+  path    => '/usr/local/bin/:/bin/'
+}
